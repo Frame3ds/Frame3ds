@@ -100,7 +100,7 @@ body, html {
   .parallax-section {
     height: 300px;
     /* Placeholder Background */
-    background-image: url('images/Print1.jpg');
+    background-image: url('images/Print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -122,9 +122,9 @@ body, html {
   }
   
   .parallax2-section {
-    height: 300px;
+    height: 150px;
     /* Placeholder Background */
-    background-image: url('images/Print1.jpg');
+    background-image: url('images/Print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -135,9 +135,9 @@ body, html {
   }
 
   .parallax3-section {
-    height: 300px;
+    height: 200px;
     /* Placeholder Background */
-    background-image: url('images/Print1.jpg');
+    background-image: url('images/Print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -223,8 +223,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #ff7a00;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .contact-info {
@@ -239,12 +239,16 @@ nav ul li a.active {
     font-size: 1rem;
 }
 
+.phone:hover {
+  color: white;
+}
+
 .phone i {
     margin-right: 5px;
 }
 
 .contact-button {
-    background-color: #ff7a00;
+    background-color: #b4843b;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -347,4 +351,269 @@ body.show-footer .fixed-footer {
 
 .footer-visible {
   transform: translateY(0); /* Show the footer */
+}
+
+
+/* Dynamic image border */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.learn-more {
+  display: inline-block;
+  background-color: #98c1d9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.image-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  animation: morphing 10s infinite;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+
+/* Fixed frame type border */
+.about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.image-container1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.image-frame {
+  width: 520px;
+  height: 440px; /* Adjust height and width for the image frame */
+  border: 5px solid #ccc; /* Square frame-like border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the border */
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+.text-container h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text-container p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.discover-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: white;
+  background-color: #87CEEB;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: #00BFFF;
+}
+
+
+/* Profile card */
+.card {
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px; /* You can change this width if needed */
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto; /* Center horizontally if there's any extra width */
+}
+
+.profile-pic {
+  margin-bottom: 15px;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.card h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #4fb3a2;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.skills i {
+  color: black;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills img {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.skills img:hover {
+  opacity: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.service-image-container {
+    flex: 1; /* Takes up 1 part of the flex container */
+    max-width: 500px; /* Set a max width for the image */
+}
+
+.service-image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.service-text-container {
+    flex: 2; /* Takes up 2 parts of the flex container */
+    display: flex;
+    flex-wrap: wrap; /* Allows text blocks to wrap */
+}
+
+.text-block {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 0 0 calc(50% - 10px); /* Makes each block take up half the width minus gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for effect */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    height: 250px; /* Set a fixed height for the text block */
+}
+
+/* Different colors for each block */
+.block1 {
+    background-color: #f5ebe0;
+}
+
+.block2 {
+    background-color: #edf6f9;
+}
+
+.block3 {
+    background-color: #ff6b35;
+}
+
+.block4 {
+    background-color: #f5ebe0;
+}
+
+h2 {
+    margin: 0; /* Remove default margin from headings */
+    font-size: 1.2em; /* Optional: Adjust font size for title */
+}
+
+p {
+    margin: 0; /* Remove default margin from paragraphs */
 }
