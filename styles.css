@@ -100,7 +100,7 @@ body, html {
   .parallax-section {
     height: 300px;
     /* Placeholder Background */
-    background-image: url('images/Print10.jpg');
+    background-image: url('images/print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -124,7 +124,7 @@ body, html {
   .parallax2-section {
     height: 150px;
     /* Placeholder Background */
-    background-image: url('images/Print10.jpg');
+    background-image: url('images/print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -137,7 +137,7 @@ body, html {
   .parallax3-section {
     height: 200px;
     /* Placeholder Background */
-    background-image: url('images/Print10.jpg');
+    background-image: url('images/print10.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
