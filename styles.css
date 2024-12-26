@@ -8,15 +8,38 @@ body, html {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background-image: url('images/Print2.jpg'); /* Example image URL */
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden; /* Prevents overflow from blurred background */
 }
+
+.hero-section .blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/Print2.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Apply blur effect */
+  z-index: -1; /* Ensure it's behind the content */
+}
+
+.hero-section .hero-icon,
+.hero-section h1,
+.hero-section h4,
+.hero-section .image-slide-in {
+  z-index: 1; /* Ensure all content is above the blurred background */
+}
+
+.hero-section .cta-button {
+  z-index: 1; /* Keep button above the blurred background */
+}
+
 
 .image-slide-in {
   display: flex;
@@ -45,10 +68,14 @@ body, html {
   color: white;
   font-weight: bolder;
 }
-
+.text-center {
+    text-align: center!important;
+    -webkit-text-stroke: 1px black;
+}
 .mission {
   color: white;
   margin-bottom: 30px;
+  font-weight: bolder;
 }
 
 .cta-button {
@@ -68,7 +95,7 @@ body, html {
  
   /* About Us Section */
   .about-section {
-    padding: 100px 20px;
+    padding: 35px 20px;
     text-align: center;
     background-color: #f5f5f5;
   }
@@ -126,7 +153,6 @@ body, html {
   
   .parallax2-section {
     height: 150px;
-    /* Placeholder Background */
     background-image: url('images/print10.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -135,8 +161,13 @@ body, html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
-
+  .parallax2-section h1 {
+    -webkit-text-stroke: 1px black;
+    font-size: 1.75cm;
+  }
   .parallax3-section {
     height: 200px;
     /* Placeholder Background */
@@ -710,6 +741,10 @@ p {
     align-items: center; /* Center horizontally */
     text-align: center; /* Center text */
     height: 250px; /* Set a fixed height for the text block */
+    transition: filter 0.3s; /* Optional: Add hover effect */
+}
+.text-block:hover{
+    filter: brightness(80%); /* Optional: Add space between title and content */
 }
 
 /* Different colors for each block */
@@ -736,4 +771,88 @@ h2 {
 
 p {
     margin: 0; /* Remove default margin from paragraphs */
+}
+
+.cta-button {
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#drop-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#drop-overlay.active {
+  display: flex; /* Show overlay */
+}
+
+.uploaded-file {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  display: none;
+  z-index: 1000;
+}
+
+.uploaded-files {
+  padding: 20px;
+}
+
+.uploaded-file {
+  margin: 10px 0;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.steps img {
+  scale: 75%;
+}
+.service-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#service-image {
+  width: 13cm;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out; /* Smooth fade transition */
 }
