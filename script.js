@@ -61,6 +61,7 @@ navItems.forEach(item => {
 });
 
 // Form submission handling
+if (window.location.href == "http://localhost:5500/quote.html") {
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS
     emailjs.init("FEGuN4wx3G3ZgxKa5");
@@ -99,3 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+} else {
+    console.log("Not on quote page");
+}

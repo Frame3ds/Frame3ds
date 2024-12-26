@@ -1,0 +1,801 @@
+@media screen and (max-width: 321px) {
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Hero Section */
+.hero-section {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section .blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/Print2.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Apply blur effect */
+  z-index: -1; /* Ensure it's behind the content */
+}
+
+.hero-section .hero-icon,
+.hero-section h1,
+.hero-section h4,
+.hero-section .image-slide-in {
+  z-index: 1; /* Ensure all content is above the blurred background */
+}
+
+.hero-section .cta-button {
+  z-index: 1; /* Keep button above the blurred background */
+}
+
+
+.image-slide-in {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.image-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hero-icon {
+  width: 90px; /* Adjust size as needed */
+  height: 90px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: #d9a253; /* Background color of the circle */
+  padding: 5px; /* Space between icon and circle edge */
+  margin-bottom: 20px; /* Space between icon and button */
+}
+
+.display-1 {
+  color: white;
+  font-weight: bolder;
+}
+.text-center {
+  font-weight: 800;
+  -webkit-text-stroke: 1px black;
+  font-size: 32px;
+}
+.mission {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 20px;
+}
+.cta-button {
+  padding: 10px 20px;
+  background-color: #d9a253;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+  /* About Us Section */
+  .about-section {
+    padding: 35px 20px;
+    padding-bottom: 1cm;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+  
+  .about-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .about-section h3 {
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  button#about {
+    padding: 3px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .image-wrapper img {
+    width: 50%;
+    border-radius: 50%;
+  }
+  
+  /* Parallax Scrolling Section */
+  .parallax-section {
+    height: 300px;
+    /* Placeholder Background */
+    background-image: url('images/print10.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .parallax-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 10px;
+    -webkit-text-stroke: 1px black;
+  }
+  .parallax-section p {
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    -webkit-text-stroke: 0.1px white;
+  }
+  .parallax2-section {
+    height: 150px;
+    background-image: url('images/print10.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .parallax2-section h1 {
+    -webkit-text-stroke: 1px black;
+    font-size: 1.75cm;
+  }
+  .parallax3-section {
+    height: 200px;
+    /* Placeholder Background */
+    background-image: url('images/print10.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .parallax-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+
+
+  /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+#navbar {
+  display: none;
+}
+.logo img {
+  width: 250px; /* Half of the original width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: white;
+    color: black;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.phone {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.phone i {
+    margin-right: 5px;
+}
+
+.contact-button {
+    background-color: #b4843b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Sticky Navbar Effects */
+.hidden {
+    top: -100px; /* Hide navbar when scrolled */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 50%;
+  max-width: 900px; /* Max width for the form */
+  padding: 20px;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-box label {
+  text-align: left; /* Left-align labels */
+}
+
+input, textarea {
+  width: 100%; /* Input fields span full width */
+}
+#uploaded-files {
+  margin-bottom: 20px;
+  padding: 10px;
+  max-width: 500px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+#uploaded-files {
+  display: none;
+  margin-bottom: 20px;
+  padding: 10px;
+  max-width: 500px;
+  margin-left: 163px;
+}
+#uploaded-files .file-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  max-width: 100%;
+  padding: 5px;
+  height: 118px;
+}
+.file-item {
+  width: 100px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* For positioning the delete button */
+}
+.file-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.file-item .file-icon {
+  font-size: 41px;
+  color: #777;
+  padding-top: 7px;
+}
+.file-name {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-group label {
+  flex: 1; /* Labels take up equal space */
+}
+
+.form-group input, .form-group textarea {
+  flex: 2; /* Inputs/textarea take up more space compared to labels */
+}
+
+
+/* Error Message */
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+/* Style for the fixed footer */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3em;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+body {
+  padding-bottom: 50px; /* Add space at the bottom to ensure content is not hidden behind the footer */
+}
+
+/* Reveal the footer on scroll */
+body.show-footer .fixed-footer {
+  transform: translateY(0); /* Show the footer */
+}
+
+.footer-visible {
+  transform: translateY(0); /* Show the footer */
+}
+
+
+/* Dynamic image border */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.learn-more {
+  display: inline-block;
+  background-color: #98c1d9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.image-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  animation: morphing 10s infinite;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  animation-play-state: paused;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+
+/* Fixed frame type border */
+.about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.image-container1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.image-frame {
+  width: 520px;
+  height: 440px; /* Adjust height and width for the image frame */
+  border: 5px solid #ccc; /* Square frame-like border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the border */
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+.text-container h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text-container p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.discover-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: white;
+  background-color: #87CEEB;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Profile card */
+.card {
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* You can change this width if needed */
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto; /* Center horizontally if there's any extra width */
+}
+
+.card {
+  position: relative;
+  overflow: hidden; /* Ensure the content stays within the card boundary */
+}
+
+.card img.card-img-top {
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-body {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile-pic {
+  margin-bottom: 15px;
+}
+
+.card:active img.card-img-top {
+  opacity: 0; /* Fade out the image */
+}
+.card:active .card-body {
+  opacity: 1; /* Make the text visible */
+}
+.profile-pic img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+
+.card h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.card h2 {
+  font-size: 100%;
+  color: #4fb3a2;
+  margin-bottom: 15px;
+}
+.card p {
+  font-size: 75%;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.skills i {
+  color: black;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills img {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.container {
+    display: none !important;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.service-image-container {
+    flex: 1; /* Takes up 1 part of the flex container */
+    max-width: 500px; /* Set a max width for the image */
+}
+
+.service-image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.service-text-container {
+    flex: 2; /* Takes up 2 parts of the flex container */
+    display: flex;
+    flex-wrap: wrap; /* Allows text blocks to wrap */
+}
+
+.text-block {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 0 0 calc(50% - 10px); /* Makes each block take up half the width minus gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for effect */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    height: 250px; /* Set a fixed height for the text block */
+    transition: filter 0.3s; /* Optional: Add hover effect */
+}
+
+/* Different colors for each block */
+.block1 {
+    background-color: #f5ebe0;
+}
+
+.block2 {
+    background-color: #edf6f9;
+}
+
+.block3 {
+    background-color: #ff6b35;
+}
+
+.block4 {
+    background-color: #f5ebe0;
+}
+
+h2 {
+    margin: 0; /* Remove default margin from headings */
+    font-size: 1.2em; /* Optional: Adjust font size for title */
+}
+
+p {
+    margin: 0; /* Remove default margin from paragraphs */
+}
+
+.cta-button {
+  transition: all 0.3s ease;
+}
+
+#drop-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#drop-overlay.active {
+  display: flex; /* Show overlay */
+}
+
+.uploaded-file {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  display: none;
+  z-index: 1000;
+}
+
+.uploaded-files {
+  padding: 20px;
+}
+
+.uploaded-file {
+  margin: 10px 0;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.steps img {
+  scale: 75%;
+}
+.service-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#service-image {
+  width: 13cm;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out; /* Smooth fade transition */
+}
+}
