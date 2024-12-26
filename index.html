@@ -70,12 +70,24 @@
             </ul>
         </nav>
         <div class="contact-info">
-          <a href="tel:+971 50 342 7834" class="phone"><i class="bi bi-telephone-plus-fill"></i> +971 50 342 7834</a>
+          <button onclick="copyToClipboard()" href="" class="phone" style="background: none; border: none; font-size: 1.25em;"><i class="bi bi-telephone-plus-fill"></i> +971 50 342 7834</button>
             <a href="/quote" class="contact-button">Contact Us</a>
         </div>
     </div>
 </header>
-
+<script>
+  function copyToClipboard() {
+    const phoneNumber = "+971 50 342 7834"; // The phone number to copy
+    navigator.clipboard
+      .writeText(phoneNumber)
+      .then(() => {
+        alert("Phone number copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy phone number: ", err);
+      });
+  }
+</script>
 
 <!-- Hero Section -->
 <section class="hero-section">
